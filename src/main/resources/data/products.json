@@ -1,0 +1,507 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Essence Mascara Lash Princess",
+      "price": 9.99
+    },
+    {
+      "id": 2,
+      "title": "Eyeshadow Palette with Mirror",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "title": "Powder Canister",
+      "price": 14.99
+    },
+    {
+      "id": 4,
+      "title": "Red Lipstick",
+      "price": 12.99
+    },
+    {
+      "id": 5,
+      "title": "Red Nail Polish",
+      "price": 8.99
+    },
+    {
+      "id": 6,
+      "title": "Calvin Klein CK One",
+      "price": 49.99
+    },
+    {
+      "id": 7,
+      "title": "Chanel Coco Noir Eau De",
+      "price": 129.99
+    },
+    {
+      "id": 8,
+      "title": "Dior J'adore",
+      "price": 89.99
+    },
+    {
+      "id": 9,
+      "title": "Dolce Shine Eau de",
+      "price": 69.99
+    },
+    {
+      "id": 10,
+      "title": "Gucci Bloom Eau de",
+      "price": 79.99
+    },
+    {
+      "id": 11,
+      "title": "Annibale Colombo Bed",
+      "price": 1899.99
+    },
+    {
+      "id": 12,
+      "title": "Annibale Colombo Sofa",
+      "price": 2499.99
+    },
+    {
+      "id": 13,
+      "title": "Bedside Table African Cherry",
+      "price": 299.99
+    },
+    {
+      "id": 14,
+      "title": "Knoll Saarinen Executive Conference Chair",
+      "price": 499.99
+    },
+    {
+      "id": 15,
+      "title": "Wooden Bathroom Sink With Mirror",
+      "price": 799.99
+    },
+    {
+      "id": 16,
+      "title": "Apple",
+      "price": 1.99
+    },
+    {
+      "id": 17,
+      "title": "Beef Steak",
+      "price": 12.99
+    },
+    {
+      "id": 18,
+      "title": "Cat Food",
+      "price": 8.99
+    },
+    {
+      "id": 19,
+      "title": "Chicken Meat",
+      "price": 9.99
+    },
+    {
+      "id": 20,
+      "title": "Cooking Oil",
+      "price": 4.99
+    },
+    {
+      "id": 21,
+      "title": "Cucumber",
+      "price": 1.49
+    },
+    {
+      "id": 22,
+      "title": "Dog Food",
+      "price": 10.99
+    },
+    {
+      "id": 23,
+      "title": "Eggs",
+      "price": 2.99
+    },
+    {
+      "id": 24,
+      "title": "Fish Steak",
+      "price": 14.99
+    },
+    {
+      "id": 25,
+      "title": "Green Bell Pepper",
+      "price": 1.29
+    },
+    {
+      "id": 26,
+      "title": "Green Chili Pepper",
+      "price": 0.99
+    },
+    {
+      "id": 27,
+      "title": "Honey Jar",
+      "price": 6.99
+    },
+    {
+      "id": 28,
+      "title": "Ice Cream",
+      "price": 5.49
+    },
+    {
+      "id": 29,
+      "title": "Juice",
+      "price": 3.99
+    },
+    {
+      "id": 30,
+      "title": "Kiwi",
+      "price": 2.49
+    },
+    {
+      "id": 31,
+      "title": "Lemon",
+      "price": 0.79
+    },
+    {
+      "id": 32,
+      "title": "Milk",
+      "price": 3.49
+    },
+    {
+      "id": 33,
+      "title": "Mulberry",
+      "price": 4.99
+    },
+    {
+      "id": 34,
+      "title": "Nescafe Coffee",
+      "price": 7.99
+    },
+    {
+      "id": 35,
+      "title": "Potatoes",
+      "price": 2.29
+    },
+    {
+      "id": 36,
+      "title": "Protein Powder",
+      "price": 19.99
+    },
+    {
+      "id": 37,
+      "title": "Red Onions",
+      "price": 1.99
+    },
+    {
+      "id": 38,
+      "title": "Rice",
+      "price": 5.99
+    },
+    {
+      "id": 39,
+      "title": "Soft Drinks",
+      "price": 1.99
+    },
+    {
+      "id": 40,
+      "title": "Strawberry",
+      "price": 3.99
+    },
+    {
+      "id": 41,
+      "title": "Tissue Paper Box",
+      "price": 2.49
+    },
+    {
+      "id": 42,
+      "title": "Water",
+      "price": 0.99
+    },
+    {
+      "id": 43,
+      "title": "Decoration Swing",
+      "price": 59.99
+    },
+    {
+      "id": 44,
+      "title": "Family Tree Photo Frame",
+      "price": 29.99
+    },
+    {
+      "id": 45,
+      "title": "House Showpiece Plant",
+      "price": 39.99
+    },
+    {
+      "id": 46,
+      "title": "Plant Pot",
+      "price": 14.99
+    },
+    {
+      "id": 47,
+      "title": "Table Lamp",
+      "price": 49.99
+    },
+    {
+      "id": 48,
+      "title": "Bamboo Spatula",
+      "price": 7.99
+    },
+    {
+      "id": 49,
+      "title": "Black Aluminium Cup",
+      "price": 5.99
+    },
+    {
+      "id": 50,
+      "title": "Black Whisk",
+      "price": 9.99
+    },
+    {
+      "id": 51,
+      "title": "Boxed Blender",
+      "price": 39.99
+    },
+    {
+      "id": 52,
+      "title": "Carbon Steel Wok",
+      "price": 29.99
+    },
+    {
+      "id": 53,
+      "title": "Chopping Board",
+      "price": 12.99
+    },
+    {
+      "id": 54,
+      "title": "Citrus Squeezer Yellow",
+      "price": 8.99
+    },
+    {
+      "id": 55,
+      "title": "Egg Slicer",
+      "price": 6.99
+    },
+    {
+      "id": 56,
+      "title": "Electric Stove",
+      "price": 49.99
+    },
+    {
+      "id": 57,
+      "title": "Fine Mesh Strainer",
+      "price": 9.99
+    },
+    {
+      "id": 58,
+      "title": "Fork",
+      "price": 3.99
+    },
+    {
+      "id": 59,
+      "title": "Glass",
+      "price": 4.99
+    },
+    {
+      "id": 60,
+      "title": "Grater Black",
+      "price": 10.99
+    },
+    {
+      "id": 61,
+      "title": "Hand Blender",
+      "price": 34.99
+    },
+    {
+      "id": 62,
+      "title": "Ice Cube Tray",
+      "price": 5.99
+    },
+    {
+      "id": 63,
+      "title": "Kitchen Sieve",
+      "price": 7.99
+    },
+    {
+      "id": 64,
+      "title": "Knife",
+      "price": 14.99
+    },
+    {
+      "id": 65,
+      "title": "Lunch Box",
+      "price": 12.99
+    },
+    {
+      "id": 66,
+      "title": "Microwave Oven",
+      "price": 89.99
+    },
+    {
+      "id": 67,
+      "title": "Mug Tree Stand",
+      "price": 15.99
+    },
+    {
+      "id": 68,
+      "title": "Pan",
+      "price": 24.99
+    },
+    {
+      "id": 69,
+      "title": "Plate",
+      "price": 3.99
+    },
+    {
+      "id": 70,
+      "title": "Red Tongs",
+      "price": 6.99
+    },
+    {
+      "id": 71,
+      "title": "Silver Pot With Glass Cap",
+      "price": 39.99
+    },
+    {
+      "id": 72,
+      "title": "Slotted Turner",
+      "price": 8.99
+    },
+    {
+      "id": 73,
+      "title": "Spice Rack",
+      "price": 19.99
+    },
+    {
+      "id": 74,
+      "title": "Spoon",
+      "price": 4.99
+    },
+    {
+      "id": 75,
+      "title": "Tray",
+      "price": 16.99
+    },
+    {
+      "id": 76,
+      "title": "Wooden Rolling Pin",
+      "price": 11.99
+    },
+    {
+      "id": 77,
+      "title": "Yellow Peeler",
+      "price": 5.99
+    },
+    {
+      "id": 78,
+      "title": "Apple MacBook Pro 14 Inch Space Grey",
+      "price": 1999.99
+    },
+    {
+      "id": 79,
+      "title": "Asus Zenbook Pro Dual Screen Laptop",
+      "price": 1799.99
+    },
+    {
+      "id": 80,
+      "title": "Huawei Matebook X Pro",
+      "price": 1399.99
+    },
+    {
+      "id": 81,
+      "title": "Lenovo Yoga 920",
+      "price": 1099.99
+    },
+    {
+      "id": 82,
+      "title": "New DELL XPS 13 9300 Laptop",
+      "price": 1499.99
+    },
+    {
+      "id": 83,
+      "title": "Blue & Black Check Shirt",
+      "price": 29.99
+    },
+    {
+      "id": 84,
+      "title": "Gigabyte Aorus Men Tshirt",
+      "price": 24.99
+    },
+    {
+      "id": 85,
+      "title": "Man Plaid Shirt",
+      "price": 34.99
+    },
+    {
+      "id": 86,
+      "title": "Man Short Sleeve Shirt",
+      "price": 19.99
+    },
+    {
+      "id": 87,
+      "title": "Men Check Shirt",
+      "price": 27.99
+    },
+    {
+      "id": 88,
+      "title": "Nike Air Jordan 1 Red And Black",
+      "price": 149.99
+    },
+    {
+      "id": 89,
+      "title": "Nike Baseball Cleats",
+      "price": 79.99
+    },
+    {
+      "id": 90,
+      "title": "Puma Future Rider Trainers",
+      "price": 89.99
+    },
+    {
+      "id": 91,
+      "title": "Sports Sneakers Off White & Red",
+      "price": 119.99
+    },
+    {
+      "id": 92,
+      "title": "Sports Sneakers Off White Red",
+      "price": 109.99
+    },
+    {
+      "id": 93,
+      "title": "Brown Leather Belt Watch",
+      "price": 89.99
+    },
+    {
+      "id": 94,
+      "title": "Longines Master Collection",
+      "price": 1499.99
+    },
+    {
+      "id": 95,
+      "title": "Rolex Cellini Date Black Dial",
+      "price": 8999.99
+    },
+    {
+      "id": 96,
+      "title": "Rolex Cellini Moonphase",
+      "price": 12999.99
+    },
+    {
+      "id": 97,
+      "title": "Rolex Datejust",
+      "price": 10999.99
+    },
+    {
+      "id": 98,
+      "title": "Rolex Submariner Watch",
+      "price": 13999.99
+    },
+    {
+      "id": 99,
+      "title": "Amazon Echo Plus",
+      "price": 99.99
+    },
+    {
+      "id": 100,
+      "title": "Apple Airpods",
+      "price": 129.99
+    }
+  ],
+  "total": 194,
+  "skip": 0,
+  "limit": 100
+}
