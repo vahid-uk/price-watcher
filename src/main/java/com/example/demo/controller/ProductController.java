@@ -31,10 +31,9 @@ public class ProductController {
         return productOptional.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/product")
+    @PutMapping("/product")
     public ResponseEntity<Product> getProduct(@RequestBody Product product) {
         if (Optional.ofNullable(product).isEmpty() ||
-                ObjectUtils.isEmpty(product.price()) ||
                 ObjectUtils.isEmpty(product.id()) ||
                 (
                         !ObjectUtils.isEmpty(product.id()) &&
@@ -43,8 +42,11 @@ public class ProductController {
             return ResponseEntity.badRequest().build();
         }
         Optional<Product> productOptional = productService.updateProduct(product);
-        productWatchService.addNewPriceToHistory(DUMMY_ECOMMERCE_URL+product.id(), product.price());
-        return productOptional.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+        if (productOptional.isPresent()) {
+            productWatchService.addNewPriceToHistory(DUMMY_ECOMMERCE_URL+product.id(), product.price());
+            return ResponseEntity.ok(productOptional.get());
+        }
+        return ResponseEntity.notFound().build();
     }
 
 }

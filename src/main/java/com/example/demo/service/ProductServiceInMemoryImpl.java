@@ -48,18 +48,19 @@ public class ProductServiceInMemoryImpl implements ProductService {
     @Override
     public Optional<Product> updateProduct(Product product) {
         Optional<Product> productOptional = findById(product.id());
+
         if (productOptional.isEmpty()) {
             return productOptional;
         } else {
             Product actualProduct = productOptional.get();
-            products.put(product.id(),  new Product(product.id(),
+            Product updatedProduct = new Product(product.id(),
                     (product.title() != null ? product.title(): actualProduct.title()),
                     (product.url() != null ? product.url(): actualProduct.url()),
-                    (product.price())
-            ));
+                    (product.price() != null ? product.price(): actualProduct.price())
+            );
+            products.put(product.id(), updatedProduct);
+            return Optional.of(updatedProduct);
         }
-
-        return Optional.of(product);
     }
 
     private Map<Long,Product> generateProducts() {

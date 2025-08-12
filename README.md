@@ -112,7 +112,7 @@ alert if it meets alert criteria.
 
 ```bash
 curl --header "Content-Type: application/json" \
-  --request POST \
+  --request PUT \
   --data '{"id": "1", "title" : "some new title" , "price": "4.03"}' \
   http://localhost:8080/product
 ```

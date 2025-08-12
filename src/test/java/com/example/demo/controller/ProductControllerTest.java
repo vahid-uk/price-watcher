@@ -75,7 +75,7 @@ public class ProductControllerTest {
     public void test_updating_an_entries_title_and_price() {
         var watchUrl = """
                 {"id": "2", "title":"some new title", "price": "22.10"}""";
-        Assertions.assertThat(mvcTester.post().uri("/product")
+        Assertions.assertThat(mvcTester.put().uri("/product")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(watchUrl)
                         .accept(MediaType.APPLICATION_JSON)
@@ -99,7 +99,7 @@ public class ProductControllerTest {
     public void test_updating_an_entries_price() {
         var watchUrl = """
                 {"id": "3",  "price": "22.30"}""";
-        Assertions.assertThat(mvcTester.post().uri("/product")
+        Assertions.assertThat(mvcTester.put().uri("/product")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(watchUrl)
                         .accept(MediaType.APPLICATION_JSON)
@@ -113,6 +113,28 @@ public class ProductControllerTest {
                 .satisfies(json-> {
                     json.assertThat().extractingPath("$.id").as("id").isEqualTo(3);
                     json.assertThat().extractingPath("$.price").as("price").isEqualTo(22.30);
+                });
+
+    }
+
+    @Test
+    public void test_updating_an_entries_title_only() {
+        var watchUrl = """
+                {"id": "3",  "title": "test"}""";
+        Assertions.assertThat(mvcTester.put().uri("/product")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(watchUrl)
+                        .accept(MediaType.APPLICATION_JSON)
+                )
+                .hasStatus(HttpStatus.OK)
+                .hasContentType(MediaType.APPLICATION_JSON);
+        assertThat(mvcTester.get().uri("/product/{id}", 3).accept(MediaType.APPLICATION_JSON))
+                .hasStatus(HttpStatus.OK)
+                .hasContentType(MediaType.APPLICATION_JSON)
+                .bodyJson()
+                .satisfies(json-> {
+                    json.assertThat().extractingPath("$.id").as("id").isEqualTo(3);
+                    json.assertThat().extractingPath("$.title").as("title").isEqualTo("test");
                 });
 
     }
