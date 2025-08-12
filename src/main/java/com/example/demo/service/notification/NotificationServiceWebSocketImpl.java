@@ -11,9 +11,6 @@ public class NotificationServiceWebSocketImpl implements NotificationService {
 
     /**
      * This would use websockets to send content to end user.
-     * @param url
-     * @param expectedPrice
-     * @param price
      */
     @Override
     public void notifyUser(String url, BigDecimal expectedPrice, BigDecimal price, LinkedHashMap<LocalDateTime, BigDecimal> history) {

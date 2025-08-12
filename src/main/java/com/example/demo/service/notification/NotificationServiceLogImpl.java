@@ -20,9 +20,6 @@ public class NotificationServiceLogImpl implements NotificationService {
 
     /**
      * This is called by ProductRenewalService when the price has met desired price limit of a given url
-     * @param url
-     * @param expectedPrice
-     * @param price
      */
     @Override
     public void notifyUser(String url, BigDecimal expectedPrice, BigDecimal price, LinkedHashMap<LocalDateTime, BigDecimal> history) {
