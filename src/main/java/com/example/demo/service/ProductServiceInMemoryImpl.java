@@ -33,7 +33,7 @@ public class ProductServiceInMemoryImpl implements ProductService {
 
     @Override
     public Optional<Product> findById(Long id) {
-        return Optional.of(products.get(id));
+        return Optional.ofNullable(products.get(id));
     }
 
     @Override

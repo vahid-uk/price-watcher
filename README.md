@@ -118,6 +118,28 @@ curl --header "Content-Type: application/json" \
 ```
 
 
+## Getting an existent product
+
+Change to id price and change price, this will trigger schedule check to
+alert if it meets alert criteria.
+
+```bash
+curl --header "Content-Type: application/json" \
+  --request GET \
+  http://localhost:8080/product/1
+```
+
+## Getting a non existent product
+
+Change to id price and change price, this will trigger schedule check to
+alert if it meets alert criteria.
+
+```bash
+curl --header "Content-Type: application/json" \
+  --request GET \
+  http://localhost:8080/product/1111
+```
+
 -----------
 
 ## History feature

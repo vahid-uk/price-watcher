@@ -61,6 +61,11 @@ public class ProductControllerTest {
 
     }
 
+    @Test
+    public void test_getting_product_that_does_not_exist() {
+        assertThat(mvcTester.get().uri("/product/{id}", 949).accept(MediaType.APPLICATION_JSON))
+                .hasStatus(HttpStatus.NOT_FOUND);
+    }
 
     /**
      * Below test cases cover updating an existing product price and title
