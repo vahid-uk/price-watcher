@@ -7,9 +7,15 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest( ProductWatchController.class)
 public class ProductWatchControllerTest {
@@ -19,6 +25,9 @@ public class ProductWatchControllerTest {
 
     @Autowired
     MockMvcTester mvcTester;
+
+    @Autowired
+    MockMvc mockMvc;
 
     /**
      * Below test cases cover adding entry to watch list
@@ -115,43 +124,47 @@ public class ProductWatchControllerTest {
                 .hasContentType(MediaType.APPLICATION_JSON);
     }
 
-    /**
-     *Below test cases cover deletion of entries from watch list
-     */
+
+
     @Test
-    public void test_deleting_an_entry_with_no_content() {
+    public void test_deleting_an_entry() throws Exception {
         var watchUrl = """
-                {}""";
-        assertThat(mvcTester.delete().uri("/delete")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(watchUrl)
-                .accept(MediaType.APPLICATION_JSON)
-        )
-                .hasStatus(HttpStatus.BAD_REQUEST);
+                {"url": "http://localhost:8080/2"}""";
+
+       mockMvc.perform(delete("/delete")
+               .content(watchUrl)
+               .contentType(MediaType.APPLICATION_JSON)
+               .accept(MediaType.APPLICATION_JSON)).andExpect(status().isNoContent());
+
+
+       verify(productWatcherService, times(1)).removeEntry(any());
     }
 
     @Test
-    public void test_deleting_an_entry_with_empty_url() {
+    public void test_deleting_an_entry_with_blank_url() throws Exception {
         var watchUrl = """
-                {"url": ""}""";
-        assertThat(mvcTester.delete().uri("/delete")
-                .contentType(MediaType.APPLICATION_JSON)
+                {"url": ""}
+                """;
+
+        mockMvc.perform(delete("/delete")
                 .content(watchUrl)
-                .accept(MediaType.APPLICATION_JSON)
-        )
-                .hasStatus(HttpStatus.BAD_REQUEST);
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)).andExpect(status().isNoContent());
+
+
+        verify(productWatcherService, times(0)).removeEntry(any());
     }
 
     @Test
-    public void test_deleting_an_entry() {
-        var watchUrl = """
-                {"url": "http://localhost:8080/product/2"}""";
-        assertThat(mvcTester.delete().uri("/delete")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(watchUrl)
-                .accept(MediaType.APPLICATION_JSON)
-        )
-                .hasStatus(HttpStatus.NO_CONTENT);
+    public void test_deleting_an_entry_with_no_body() throws Exception {
+        var watchUrl = "";
 
+        mockMvc.perform(delete("/delete")
+                .content(watchUrl)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON)).andExpect(status().is4xxClientError());
+
+
+        verify(productWatcherService, times(0)).removeEntry(any());
     }
 }

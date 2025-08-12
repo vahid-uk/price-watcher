@@ -5,8 +5,10 @@ import com.example.demo.service.watch.ProductWatchService;
 import com.example.demo.service.watch.basic.ProductWatcherServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
@@ -35,15 +37,14 @@ public class ProductWatchController {
         return ResponseEntity.created(URI.create(productWatch.url())).body(productWatch);
     }
 
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     @DeleteMapping("/delete")
-    public ResponseEntity<ProductWatch> deleteEntry(@RequestBody ProductWatch productWatch) {
-        if (Optional.ofNullable(productWatch).isEmpty() ||
-                ObjectUtils.isEmpty(productWatch.url())
+    void deleteEntry(@RequestBody ProductWatch productWatch) {
+        if (Optional.ofNullable(productWatch).isPresent() &&
+                StringUtils.hasLength(productWatch.url())
         ) {
-            return ResponseEntity.badRequest().build();
+            log.atInfo().log("removing url {}  ", productWatch.url());
+            productWatchService.removeEntry(productWatch.url());
         }
-        log.atInfo().log("removing url {}  ", productWatch.url());
-        productWatchService.removeEntry(productWatch.url());
-        return ResponseEntity.noContent().build();
     }
 }
